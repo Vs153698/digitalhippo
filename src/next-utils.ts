@@ -4,5 +4,6 @@ const PORT  = Number(process.env.PORT) || 3000;
 export const NextApp  = next({
     dev: process.env.NODE_ENV !== "production",
     port: PORT,
-    dir: "./src"
 })
+
+export const nextHandler = NextApp.getRequestHandler();

@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+How to setup payload cms, refer to below packages and file
 
-## Getting Started
+PACKAGES:
 
-First, run the development server:
+"@payloadcms/bundler-webpack": "^1.0.5", 
+"@payloadcms/db-mongodb": "^1.2.0",
+"@payloadcms/richtext-slate": "^1.3.1",
+"cross-env": "^7.0.3",
+"dotenv": "^16.3.1",
+"express": "^4.18.2",
+"nodemon": "^3.0.2",
+"payload": "^2.6.0",
+"ts-node": "^10.9.2"
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+SCRIPTS:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+"dev": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts nodemon",
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+FILES CREATED:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+tsconfig.server.json
+nodemon.json
+.env
+src/payload.config.ts
+src/get-payload.ts
+src/next-utils.ts
+src/server.ts
